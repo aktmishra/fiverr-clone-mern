@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013914;
+  color: white;
+
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+
+    //   .text {
+    //   }
+
+      .dot {
+        font-size: 42px;
+        color: #3af0a1;
+      }
+    }
+
+    .links {
+      display: flex;
+      font-weight: 24px;
+      gap: 34px;
+      align-items: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      white-space: nowrap;
+      
+      span:hover{
+      cursor: pointer;
+
+      }
+      
+      button {
+        padding: 10px 15px;
+        background-color: #013914;
+        color: white;
+        border-color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  hr{
+    width: 100%;
+    height: 0;
+    border-top: 0.5px solid gray;
+    border-bottom: 0.5px solid gray;
+    
+  }
+
+  .menu{
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
