@@ -1,7 +1,9 @@
 import Navbar from "./component/navbar/Navbar";
 import "./App.scss";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
-import { Children } from "react";
+import Home from './pages/home/Home';
+import Footer from './component/footer/Footer'
+ 
 
 function App() {
   const Layout = () => {
@@ -18,14 +20,14 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-      children: {
+      children: [{ 
         path: "/",
-        element: <Home />,
-      },
-    },
+        element: <Home />,}
+      ]
+    }
   ]);
 
-return(<RouterProvider router={router}></RouterProvider>)
+return(<RouterProvider router={router}/> )
 }
 
 export default App;
