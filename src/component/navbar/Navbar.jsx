@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [userOption, setUserOption] = useState(false);
   const [open, setOpen] = useState(false);
+  
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
   };
@@ -25,7 +27,7 @@ const Navbar = () => {
     <div className={active ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          <span className="text">fiverr</span>
+        <Link className="link" to='./'><span className="text">fiverr</span></Link>  
           <span className="dot">.</span>
         </div>
 
@@ -47,10 +49,10 @@ const Navbar = () => {
             </Link>
           )}
           {currentUser ? (
-            <div className="user" onClick={() => setOpen(!open)}>
+            <div className="user" onClick={() => setUserOption(!userOption)}>
               <img src="./img/user.jpg" alt="" className="userImage" />
               <span>{currentUser?.userName}</span>
-              {open && (
+              {userOption && (
                 <div className="options">
                   {currentUser?.isSeller && (
                     <>
@@ -88,10 +90,20 @@ const Navbar = () => {
         <>
           <hr />
 
-          <div className="menu">
-            <Link className="link menuLink" to="/">
-              Graphics & Design
-            </Link>
+          <div className="menues">
+             
+              <Link className="link menuLink" to="/" on={()=>setOpen(!open)}>
+                 Graphics & Design  
+                {open&&(
+                  <div className="menuOption">
+                    <span>hdhh</span>
+                    <span>hdhh</span>
+                    <span>hdhh</span>
+                    <span>hdhh</span>
+                  </div>
+                )}
+              </Link>
+             
             <Link className="link menuLink" to="/">
               Digital Marketing
             </Link>

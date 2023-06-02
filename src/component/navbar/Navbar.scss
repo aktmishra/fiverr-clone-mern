@@ -47,7 +47,6 @@
       white-space: nowrap;
       padding-bottom: 2.5px;
 
-       
       span {
         display: flex;
         align-items: center;
@@ -113,7 +112,7 @@
     border-bottom: 0.125px solid lightgray;
   }
 
-  .menu {
+  .menues {
     width: 90%;
     padding: 0px 0;
     display: flex;
@@ -122,8 +121,25 @@
     justify-content: space-between;
     .menuLink {
       padding-block: 10px;
-      &:hover{
-        border-bottom:4px solid #3af0a1;
+      position: relative;
+      &:hover {
+        border-bottom: 4px solid #3af0a1;
+      }
+      .menuOption {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 200px;
+        padding: 20px;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        color: gray;
+        font-weight: 400px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 999;
       }
     }
   }
