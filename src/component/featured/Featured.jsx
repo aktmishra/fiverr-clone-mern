@@ -10,11 +10,25 @@ function Featured() {
           </h1>
           <div className="search">
             <div className="searchInput">
-              <img src="public/img/search.png" alt="searchIcon" />
-              <input type="text" placeholder="Try 'building Web App'"/>
+              <label htmlFor="searchIcon">
+                <img src="public/img/search.png" alt="searchIcon" />
+              </label>
+
+              <input
+                type="text"
+                placeholder="Try 'building Web App'"
+                id="searchIcon"
+              />
             </div>
             <button>Search</button>
           </div>
+          <div className="popular">
+              <span>Popular :</span>
+              <button>Web Design</button>
+              <button>WorldPress</button>
+              <button>Logo Design</button>
+              <button>AI Services</button>
+            </div>
         </div>
         <div className="right">
           <img src="public/img/man.png" alt="" />
